@@ -17,15 +17,16 @@
 		<link href="css/style.css" rel="stylesheet" type="text/css">
 		<link href="css/slide.css" rel="stylesheet" type="text/css">
 
-
-		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
 		<link rel="shortcut icon" href="/favicon.ico" />
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
         <script src="js/jquery-latest.js" type="text/javascript"></script>
-        <script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
-         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+        <!-- // <script src="js/jquery-1.7.1.min.js" type="text/javascript"></script> -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 	    <script src="js/jquery.quicksand.js" type="text/javascript"></script>
         <script src="js/jquery.easing.js" type="text/javascript"></script>
         <script src="js/script.js" type="text/javascript"></script>
@@ -33,7 +34,22 @@
 		<script src="http://use.typekit.com/dmd8lnp.js" type="text/javascript"></script>
         
         <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-        
+        <script src="js/slides.min.jquery.js" type="text/javascript"></script>
+         <script type="text/javascript">
+		// $(document).ready(function(){
+		// 	$('.index_slides').slides({
+		// 		generatePagination: false,
+		// 		preload: true,
+		// 		preloadImage: 'img/loading.gif',
+		// 		effect: 'slide, fade',
+		// 		crossfade: true,
+		// 		slideSpeed: 350,
+		// 		fadeSpeed: 550,
+		// 		play: 6000,
+		// 		paginationClass: 'custom-pagination'
+		// 	});
+		// });
+		// </script>
       
   <!-- End SlidesJS Optional-->
 
@@ -88,9 +104,6 @@
           
 <!--Portfolio Content-->
   <div id="content_container" class="sixteen columns post">
-     <div class="close_btn" >
-         <a href="#"> <img class="close_window" src="img/close_btn.png"  ></a>  
-      </div> 
    </div>                  
    <!--Portfolio Page-->            
             <nav class="main-nav sixteen columns">
@@ -490,8 +503,8 @@
 	
 	 $('.art_01').click(function(){
 
-		$('#content_container').toggle('fast');
-		 $('#content_container').load('work1.html');
+		$('#content_container').toggle('fast');//.load('work2.html');
+		$('#content_container').load('work1.html');
 		
 	});
 	</script>

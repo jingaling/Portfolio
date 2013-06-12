@@ -49,8 +49,13 @@
 	</head>
 
 	<body>
+
+		<script type="text/javascript">
+			$('.close_window').click(function(){
+		$('#content_container').hide();
+	});
+</script>
 	
-		 
    <section class="grid col-three-quarters">
       <div class="index_slides">
 			<div class="slides_container">
@@ -75,6 +80,11 @@
       </section>
       
    <aside class="grid col-one-quarter one-third-second column thumbnail">
+        <div class="close_btn" >
+         <a href="#"> <img class="close_window" src="img/close_btn.png"  ></a>
+        </div>
+
+
         <p class="projectTitle">DESIGN REACTOR WHITEPAPER
 		</p>
 		<p class="projectCat">ROLE:
