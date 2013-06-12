@@ -142,16 +142,22 @@ margin: 0;
 	
 }
 /* PROJECT DETAIL START*/
+.dis_content
+{
+	margin-top:-39px;
+}
+
+
 .close_window
 {
 	display: block;
-	padding-left: 270px;
+	padding-left: 272px;
 }
 
 .projectTitle {  
 	border-top: 4px solid black;
 	font-size: 1.4em;
-	padding-top: 10px;
+	padding-top: 5px;
 	padding-left: 8px;
 	border-bottom: 1px solid black;
 }
@@ -166,7 +172,7 @@ margin: 0;
 .pList {  
 	color: #302f2f;
 	font-family: 'knockout2';
-	font-size: 1.0em;
+	font-size: 0.9em;
 	background-color: #d7fcf8;
     padding-left: 8px;
     padding-right: 10px;
@@ -186,10 +192,9 @@ margin: 0;
     padding-top: 8px;
     padding-bottom: 8px;
     margin-top:15px;
-    margin-bottom:40px;
+    margin-bottom:25px;
     letter-spacing: 0.01em;
 }
-
 
 .mbottom {  
 	color: #ffffff;
@@ -201,21 +206,13 @@ margin: 0;
     padding-right: 8px;
     padding-top: 12px;
     padding-bottom: 8px;
-    margin-top:20px;
      margin-bottom:10px;
-    
-  
     
 }
 .pagination_container {  
     margin-top:20px;
-     
-    
-  
-    
 }
 .ebook{
-
 margin-top:20px;}
 
 /* PROJECT DETAIL END*/
