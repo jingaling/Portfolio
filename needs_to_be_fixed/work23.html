@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+
+		<title>Jing Gao's Portfolio</title>
+		<meta name="description" content="" />
+		<meta name="author" content="Jing" />
+
+		<!--Grab the Stylesheets-->
+        <!--
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
+	-->
+	<link href="css/video.css" rel="stylesheet" type="text/css"/>
+	<link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="css/slide.css" rel="stylesheet" type="text/css"/>
+
+	<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+
+	<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+	<script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
+
+	<!-- End SlidesJS Optional-->
+
+	<!-- SlidesJS Required: These styles are required if you'd like a responsive slideshow -->
+</head>
+
+<body>
+
+	<script type="text/javascript">
+	$('.close_window').click(function(){
+		$('#content_container').hide();
+		$(".latest-work li.active").children().removeClass("active");
+		$(".latest-work li.active").removeClass("active");
+	});
+	</script>
+    <div class="slide_wrap">
+		<div class="close_btn" >
+			<a href="#"><img class="close_window" src="img/close_btn.png"  /></a>
+		</div>
+        
+	<section class="grid col-three-quarters">
+		<iframe class="video_content" src="http://player.vimeo.com/video/34320625" width="830" height="520" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> 
+      </section>
+   
+	
+	<aside class="grid col-one-quarter">
+	<div class="dis_content" >
+		
+		<p class="projectTitle">VITAMIN D </p>
+		<p class="projectCat">ROLE:
+		</p>
+		<p class="pList"> Storyboarding
+		</p>
+		
+		<p class="pList"> Animation (aftereffect)
+		</p>
+		<p class="projectDetail"> An info graphic piece that teaches people the proper way to take Vitamin D. 
+		</p>
+        </div>
+      
+		
+	</aside>   
+    </div>                   
+	<!--end-->    
+	<!--Grab JS Files-->
+</body>
+
+</html>
