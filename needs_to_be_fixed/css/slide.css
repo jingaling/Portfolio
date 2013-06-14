@@ -4,6 +4,7 @@
 }
 
 .slides_container {
+box-shadow: 2px 2px 3px #c6c5c5;
 	
 	
 }
@@ -38,7 +39,7 @@
 	background-image: url(../img/pagDeactive.png);
 	background-position: 0 0;
 	width:					14px;
-	height:					auto;
+	height:					0;
 	padding-top:			11px;
 	float:					left;
 	overflow:				hidden;
@@ -50,7 +51,7 @@
 	background-image: url(../img/pagActive.png);
 	width:					14px;
 	background-position: 0 0;
-	height:					auto;
+	height:					0;
 	padding-top:			11px;
 	float:					left;
 	overflow:				hidden;
