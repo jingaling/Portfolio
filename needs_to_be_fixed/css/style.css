@@ -735,7 +735,7 @@ footer a:visited {
 	opacity: 1;
 }
 
-.portfolio-item2.active a.active .details{
+.portfolio-item2 a.active .details{
 	left: 0;
 	opacity: .99;
 	

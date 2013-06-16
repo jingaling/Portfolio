@@ -7,8 +7,8 @@
 		Remove this if you use the .htaccess -->
 
 		<title>Jing Gao's Portfolio</title>
-		<meta name="description" content="" />
-		<meta name="author" content="Austin" />
+		<meta name="description" content="Jing Gao's Portfolio" />
+		<meta name="author" content="Jean" />
 
 		<!--Grab the Stylesheets-->
         <!--
@@ -31,7 +31,7 @@
 	<script src="js/jquery.quicksand.js" type="text/javascript"></script>
 	<script src="js/jquery.easing.js" type="text/javascript"></script>
 	<script src="js/script.js" type="text/javascript"></script>
-	
+
 	<script src="http://use.typekit.com/dmd8lnp.js" type="text/javascript"></script>
 	
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
@@ -56,6 +56,7 @@
 				
 				<p class= "about_small">adobe aftereffect,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CSS & HTML,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Action Script, </p>
 				
+				
 				<p class= "about_small">Logic Pro</p>
 			</div>
 		</div>
@@ -69,9 +70,6 @@
 			<div id="dropdown-trigger">
 				<div class="trigger_area">
 					<a class="nav_about">
-                    <!--
-						<img src="img/about.png" width="70" height="36" alt="Tri" usemap="#plus">
-					-->
 					<map name="plus">
 						<area shape="rect" coords="0,0,70,36" href="#">
 					</map>
@@ -100,18 +98,17 @@
 		</ul>
 	</nav> 
 	<div class="portfolio_container">  
-
-		<div data-configid="2365915/3405868" style="width: 100%; height: auto;" class="issuuembed" hidden="false" id="work9"></div>
-		<div data-configid="2365915/3365235" style="width: 100%; height: auto;" class="issuuembed" hidden="false" id="work10"></div>
-		<div data-configid="2365915/3325825" style="width: 100%; height: auto;" class="issuuembed" hidden="false" id="work19"></div>
-		<div data-configid="2365915/3325795" style="width: 100%; height: auto;" class="issuuembed" hidden="false" id="work26"></div>
+		<div data-configid="2365915/3405868" style="width: 100%; height: auto;" class="issuuembed" hidden=true id="work9"></div>
+		<div data-configid="2365915/3365235" style="width: 100%; height: auto;" class="issuuembed" hidden=true id="work10"></div>
+		<div data-configid="2365915/3325825" style="width: 100%; height: auto;" class="issuuembed" hidden=true id="work19"></div>
+		<div data-configid="2365915/3325795" style="width: 100%; height: auto;" class="issuuembed" hidden=true id="work26"></div>
 		<script type="text/javascript" src="http://e.issuu.com/embed.js" async="true"></script>
 
-		<ul class="latest-work row portfolio-area" id="portfolio-area">
+		<ul class="latest-work row portfolio-area" id="portfolio-area" style="height: 1229px;">
 		</ul>
-
+		
 	</div><!--end portfolio-content -->
-
+	
 	<!--Contact Page-->
 	<!--contact btn-->
 </div><!--Close Container Div-->           
@@ -132,7 +129,7 @@
 			<div class="contact_wrap container">
 				<div class="contact-page">
 
-					<aside class="contact_info col-one-quarter">
+					<aside class="contact_info grid col-one-quarter">
 
 						<address class="address">
 							<h2>Contact Info </h2><br >
@@ -143,13 +140,12 @@
 
 							<div class="download">
 								<a target="_blank" href="Jing_Gao_Resume.pdf">Download Resume</a>
-
 							</div>
 						</address>
 
 					</aside>
 
-					<section class="contact_form col-three-quarters">
+					<section class="contact_form grid col-three-quarters">
 						<p class ="messageTitle">Drop a message</p>
 						<form id="contact_form" class="contact_form" action="contact.php" method="post" name="contact_form">	
 							<ul>
@@ -185,6 +181,7 @@
 
 <script type="text/javascript">
 		//top navigation
+		
 		$(document).ready(function(){
 			
 			$('.about').hide();
@@ -195,38 +192,48 @@
 				var result = '<li class="portfolio-item2 one-third column thumbnail" data-id="' 
 				+ data['data-id'] 
 				+ '" data-type="' + data['data-type']
-				+ '" page="' + data['refPage'] + '">'
+				+ '" page="' + data['refPage'] 
+				+ '">'
 				+ '<a href="#" class="art" >'
 				+ '<img src="img/' + data['imgName'] + '_1.png"  alt="Thumb">'
 				+ '<div class="one-third column thumbnail details">'
 				+ '<img src="img/' + data['imgName'] + '_2.png"  alt="Thumb">'
-				+ '</div><!--Close Details Div--></a></li><!--Close Thumbnail Div-->';
+				+ '</div></a></li>';
 				return result;
-			}
+			};
 
 			$.getJSON("data.json", function(json) {
 				for (var i = 0; i < json.data.length; i++) {
 					$('#portfolio-area').append(construct(json.data[i]));
 				};
+			 	window.data = $(".portfolio-area").clone();
 			});
-			
+
 			$('.portfolio_container').on('click', '.art', function(e) {
-				$('#content_container').show(); 
-				$('#content_container').load($($(e.target).parents('li')[0]).attr('page'));
+				$('#content_container').fadeOut(1000, function(){
+				    $('#content_container').load($($(e.target).parents('li')[0]).attr('page')).fadeIn(1000);
+				});
+
+				// $('#content_container').load($($(e.target).parents('li')[0]).attr('page'));
+				// if ($('#content_container').is(':hidden')) {
+				// 	$('#content_container').show(); 
+				// }
+				$('.portfolio-item2 a.active').removeClass("active");
+				$($(e.target).parents('li')[0]).addClass("active");
 			});
+
 		});
 
-		// button active 
-		$(".latest-work li").children().click(function(){
-			// If this isn't already active
-			if (!$(this).hasClass("active")) {
-			// Remove the class from anything that is active    											
-			$(".latest-work li.active").children().removeClass("active");
-			$(".latest-work li.active").removeClass("active");
-			}
-				// And make this active                
-				$(this).parent().addClass("active");
-				$(this).addClass("active");
+		$('#content_container').on('click','.close_window',function(e){
+			console.log("the close button is clicked!!!");
+			$('#content_container').fadeOut(1000);
+			$(".portfolio-item2 a.active").removeClass("active");
+		// And make this active               
+			
+		});
+
+		$(".filter li").children().click(function(){
+			$('#content_container').fadeOut(1000);
 		});
 		
 		//
@@ -236,7 +243,6 @@
 			$('.nav_about').removeClass('about_close');
 		});
 		
-		
 		$('.nav_contact').click(function(){
 			$('.contact').toggle('fast');
 		});
@@ -245,7 +251,7 @@
 			$('#content_container').hide();
 		});
 	//works navigation
+	
 	</script>
-
 </body>
 </html>

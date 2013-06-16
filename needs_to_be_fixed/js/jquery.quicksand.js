@@ -29,6 +29,7 @@ Github site: http://github.com/razorjack/quicksand
             dx: 0,
             dy: 0
         };
+		
         $.extend(options, customOptions);
         
         if ($.browser.msie || (typeof($.fn.scale) == 'undefined')) {
@@ -43,7 +44,7 @@ Github site: http://github.com/razorjack/quicksand
             var callbackFunction = arguments[2];
         }
     
-        
+		
         return this.each(function (i) {
             var val;
             var animationQueue = []; // used to store all the animation params before starting the animation; solves initial animation slowdowns
@@ -59,6 +60,7 @@ Github site: http://github.com/razorjack/quicksand
             
             var $source = $(this).find(options.selector); // source collection items
             
+			
             // Replace the collection and quit if IE6
             if ($.browser.msie && $.browser.version.substr(0,1)<7) {
                 $sourceParent.html('').append($collection);

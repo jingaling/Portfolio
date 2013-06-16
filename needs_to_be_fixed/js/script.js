@@ -1,17 +1,16 @@
 jQuery.noConflict();
 jQuery(document).ready(function($){
-	// 	if(jQuery().prettyPhoto) {
-	// 	lightboxPhoto(); 
-	// }
-	
 	if (jQuery().quicksand) {
 
  	// Clone applications to get a second collection
- 	var $data = $(".portfolio-area").clone();
- 	
 	//NOTE: Only filter on the main portfolio page, not on the subcategory pages
 	$('.portfolio-categ li').click(function(e) {
-		$(".filter li").removeClass("active");	
+		var $data=window.data;
+		$(".filter li").removeClass("active");
+		
+		$(".portfolio-area li").children().removeClass("active");
+		$(".portfolio-area li").removeClass("active");
+		
 		// Use the last category class as the category to filter by. This means that multiple categories are not supported (yet)
 		var filterClass=$(this).attr('class').split(' ').slice(-1)[0];
 		
@@ -24,8 +23,6 @@ jQuery(document).ready(function($){
 			duration: 600,
 			adjustHeight: 'auto'
 		}, function () {
-
-				// lightboxPhoto();
 			});		
 		$(this).addClass("active"); 			
 		return false;
