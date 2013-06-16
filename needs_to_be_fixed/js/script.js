@@ -1,14 +1,8 @@
 jQuery.noConflict();
 jQuery(document).ready(function($){
-	
-	
-	
 	// 	if(jQuery().prettyPhoto) {
-		
 	// 	lightboxPhoto(); 
-	
 	// }
-	
 	
 	if (jQuery().quicksand) {
 
