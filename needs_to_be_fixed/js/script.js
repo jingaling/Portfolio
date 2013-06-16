@@ -1,7 +1,6 @@
 jQuery.noConflict();
 jQuery(document).ready(function($){
 	if (jQuery().quicksand) {
-
  	// Clone applications to get a second collection
 	//NOTE: Only filter on the main portfolio page, not on the subcategory pages
 	$('.portfolio-categ li').click(function(e) {
@@ -23,7 +22,7 @@ jQuery(document).ready(function($){
 			duration: 600,
 			adjustHeight: 'auto'
 		}, function () {
-			});		
+		});		
 		$(this).addClass("active"); 			
 		return false;
 	});
