@@ -30,7 +30,7 @@ $Body .= $Message;
 $Body .= "\n";
 
 // send email 
-echo json_encode( 'status' => mail($EmailTo, $Subject, $Body, "From: <$EmailFrom>") );
+echo json_encode( array('status' => mail($EmailTo, $Subject, $Body, "From: <$EmailFrom>")) );
 
 // redirect to success page 
 // if ($success){
