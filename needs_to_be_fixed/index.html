@@ -235,9 +235,8 @@
 					// alert("send email function triggered with " + nameVal + emailFromVal + messageVal);
 					$.ajax({
 					        type: "POST",
-					        url: '/contact.php',
+					        url: 'contact.php',
 					        data: ({ name: nameVal, email: emailFromVal, message: messageVal }),
-					        dataType: "html",
 					        success: function(data) {
 					        	if(data.status == true) {
 					        		alert("Thanks for your email, I will get back to you ASAP!");
