@@ -147,7 +147,7 @@
 
 						<section class="contact_form grid col-three-quarters">
 							<p class ="messageTitle">Drop a message</p>
-							<form id="contact_form" class="contact_form" action="contact.php" method="post" name="contact_form">	
+							<form id="contact_form" class="contact_form" action="" method="post" name="contact_form">	
 								<ul>
 									<li>
 										<label for="name">Your name:</label>
@@ -188,6 +188,7 @@
 			$('.contact').hide();	
 			$('#content_container').hide();
 
+			// Function to generate single portfolio block
 			var construct = function(data) {
 				var result = '<li class="portfolio-item2 one-third column thumbnail" data-id="' 
 				+ data['data-id'] 
@@ -202,6 +203,7 @@
 				return result;
 			};
 
+			// Load portfolio data from data.json
 			$.getJSON("data.json", function(json) {
 				for (var i = 0; i < json.data.length; i++) {
 					$('#portfolio-area').append(construct(json.data[i]));
@@ -209,32 +211,62 @@
 				window.data = $(".portfolio-area").clone();
 			});
 
+			// Load the separate html after click
 			$('.portfolio_container').on('click', '.art', function(e) {
 				$('#content_container').fadeOut(1000, function(){
 					$('#content_container').load($($(e.target).parents('li')[0]).attr('page')).fadeIn(1000);
 				});
-
-				// $('#content_container').load($($(e.target).parents('li')[0]).attr('page'));
-				// if ($('#content_container').is(':hidden')) {
-				// 	$('#content_container').show(); 
-				// }
 				$('.portfolio-item2 a.active').removeClass("active");
-				$($(e.target).parents('li')[0]).addClass("active");
+				$($(e.target).parents('a')[0]).addClass("active");
 			});
 
+			// Send email function
+			$("#submitttt").click(function(){
+
+				var hasError = false;
+				
+				var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+
+				var nameVal = $("#name").val();
+				var emailFromVal = $("#email").val();
+				if(emailFromVal == '') {
+					$("#emailFromVal").after('<span class="error">You forgot to enter the email address to send to.</span>');
+					hasError = true;
+				} else if(!emailReg.test(emailToVal)) {
+					$("#emailTo").after('<span class="error">Enter a valid email address to send to.</span>');
+					hasError = true;
+				}
+				var messageVal = $("#message").val();
+
+				if(hasError == false) {
+					// alert("send email function triggered with " + nameVal + emailFromVal + messageVal);
+					//$("#sendEmail li.buttons").append('<img src="/wp-content/themes/default/images/template/loading.gif" alt="Loading" id="loading" />');
+
+					$.post("http://www.jean-gao.com/contact.php",
+						{ name: nameVal, email: emailFromVal, message: messageVal },
+						function(data){
+							alert("called back");
+								$("#sendEmail").slideUp("normal", function() {				   
+								$("#sendEmail").before('<h1>Success</h1><p>Your email was sent.</p>');											
+							});
+						}
+					);
+				}
+
+				return false;
+			});
+		});
+	
+		// Close the content container correctly
+		$('#content_container').on('click','.close_window',function(e){
+			$('#content_container').fadeOut(1000);
+			$(".portfolio-item2 a.active").removeClass("active");
 		});
 
-$('#content_container').on('click','.close_window',function(e){
-	console.log("the close button is clicked!!!");
-	$('#content_container').fadeOut(1000);
-	$(".portfolio-item2 a.active").removeClass("active");
-		// And make this active               
-		
-	});
-
-$(".filter li").children().click(function(){
-	$('#content_container').fadeOut(1000);
-});
+		// After click filter, fade out the content container
+		$(".filter li").children().click(function(){
+			$('#content_container').fadeOut(1000);
+		});
 
 		//
 		$('.nav_about').click(function(){
