@@ -843,7 +843,7 @@ footer a:visited {
 
     /* Note: Design for a width of 768px */
 
-    @media only screen and (min-width: 768px) and (max-width: 830px) {
+    @media only screen and (min-width: 768px) and (max-width: 959px) {
         .container                                  { width: 768px; }
         .container .column,
         .container .columns                         { margin-right: 20px;  }
