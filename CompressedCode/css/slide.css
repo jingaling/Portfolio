@@ -168,13 +168,15 @@ box-shadow: 2px 2px 3px #d0cece;
     height: 24px;
     margin-bottom: 10px;
     /*margin-right: 0;*/
+    float:right;
+    margin-top:-35px;
   
     width: 24px;
   }
-  .close_btn a
+  /*.close_btn a
   {
 	  float: right;
-  }
+  }*/
   
 
 

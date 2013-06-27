@@ -160,16 +160,15 @@ margin: 0;
 .close_window
 {
 	display: block;
-	padding-bottom: 5px;
-	padding-left: 270px;
-	margin-top: -20px;
+
+
+	/*margin-top: -20px;*/
 	opacity:0.4;
 filter:alpha(opacity=40);
 }
-/*a.close_window:hover, a.close_window:active, a.close_window:link {
-	opacity:1.0;
-filter:alpha(opacity=100);
-}*/
+
+
+
 
 .close_window:hover
 {
@@ -243,7 +242,7 @@ filter:alpha(opacity=100);
     padding-top: 12px;
     padding-bottom: 8px;
      margin-bottom:10px;
-    margin-left:180px;
+    margin-left:210px;
       letter-spacing: 0.05em;
      box-shadow: 1px 1px 2px #F5F5F5;
 }
@@ -836,14 +835,105 @@ footer a:visited {
     .container .offset-by-fourteen              { padding-left: 840px; }
     .container .offset-by-fifteen               { padding-left: 900px; }
 
+/* #Tablet (Landscape)
+================================================== */
 
+    /* Note: Design for a width of 1024px */
+
+    @media only screen and (min-width: 992px) and (max-width: 1080px) {
+        .container                                  { width: 992px; }
+        .container .column,
+        .container .columns                         { margin-right: 20px;  }
+		/*.container .column,
+        .container .columns                         { margin-left: 10px; margin-right: 10px;  }*/
+        .column.alpha, .columns.alpha               { margin-left: 0; margin-right: 10px; }
+        .column.omega, .columns.omega               { margin-right: 0; margin-left: 10px; }
+        .alpha.omega                                { margin-left: 0; margin-right: 0; }
+
+        .container .one.column,
+        .container .one.columns                     { width: 42px; }
+        .container .two.columns                     { width: 104px; }
+        .container .three.columns                   { width: 166px; }
+        .container .four.columns                    { width: 228px; }
+        .container .five.columns                    { width: 290px; }
+        .container .six.columns                     { width: 352px; }
+        .container .seven.columns                   { width: 414px; }
+        .container .eight.columns                   { width: 476px; }
+        .container .nine.columns                    { width: 538px; }
+        .container .ten.columns                     { width: 600px; }
+        .container .eleven.columns                  { width: 662px; }
+        .container .twelve.columns                  { width: 724px; }
+        .container .thirteen.columns                { width: 786px; }
+        .container .fourteen.columns                { width: 848px; }
+        .container .fifteen.columns                 { width: 910px; }
+        .container .sixteen.columns                 { width: 972px; }
+/**/
+        .container .one-third.column                { width: 194px; }
+        .container .two-thirds.column               { width: 648px; }
+
+        /* Offsets */
+        .container .offset-by-one                   { padding-left: 62px; }
+        .container .offset-by-two                   { padding-left: 124px; }
+        .container .offset-by-three                 { padding-left: 186px; }
+        .container .offset-by-four                  { padding-left: 248px; }
+        .container .offset-by-five                  { padding-left: 310px; }
+        .container .offset-by-six                   { padding-left: 372px; }
+        .container .offset-by-seven                 { padding-left: 434px; }
+        .container .offset-by-eight                 { padding-left: 596px; }
+        .container .offset-by-nine                  { padding-left: 558px; }
+        .container .offset-by-ten                   { padding-left: 620px; }
+        .container .offset-by-eleven                { padding-left: 682px; }
+        .container .offset-by-twelve                { padding-left: 744px; }
+        .container .offset-by-thirteen              { padding-left: 806px; }
+        .container .offset-by-fourteen              { padding-left: 868px; }
+        .container .offset-by-fifteen               { padding-left: 930px; }
+        
+        .small-text {
+			float: none;
+			width: 950px;
+			margin-left: 0;
+			margin-bottom: 10px;
+		}
+		.contact input:first-child {
+			margin-left: 0;
+		}
+		.contact .btn {
+			float: none;
+			padding: 15px;
+			width: 972px;
+			margin-top: 10px;
+		}
+		.contact .btn:hover {
+			cursor: pointer;
+			opacity: 1;
+			
+		}
+		.contact iframe {
+			width: 972px;
+			opacity: 1;
+		}
+		.message {
+			clear: both;
+			float: left;
+			padding: 4px;
+			width: 962px;
+			height: 110px;
+			margin-top: 0;
+			font-family: sans-serif;
+			font-size: 1.2em;
+			color: #b3a9a9;
+		}
+		.contact {
+			padding-top: 30px;
+		}
+	}
 
 /* #Tablet (Portrait)
 ================================================== */
 
     /* Note: Design for a width of 768px */
 
-    @media only screen and (min-width: 768px) and (max-width: 959px) {
+    @media only screen and (min-width: 768px) and (max-width: 830px) {
         .container                                  { width: 768px; }
         .container .column,
         .container .columns                         { margin-right: 20px;  }
@@ -1203,8 +1293,8 @@ footer a:visited {
 .col-one-quarter {
 	float: left;
     margin-bottom: 20px;
-    margin-top: 40px;
-    width: 270px;
+    margin-top: 35px;
+    width: 300px;
 	
 }
 .col-three-quarters {
@@ -1222,6 +1312,9 @@ footer a:visited {
 
 #content_container
 {
+
+
+
 	}
 #content_container object
 {
