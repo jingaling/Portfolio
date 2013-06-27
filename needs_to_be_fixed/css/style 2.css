@@ -836,7 +836,98 @@ footer a:visited {
     .container .offset-by-fourteen              { padding-left: 840px; }
     .container .offset-by-fifteen               { padding-left: 900px; }
 
+/* #Tablet (Landscape)
+================================================== */
 
+    /* Note: Design for a width of 1024px */
+
+    @media only screen and (min-width: 1024px) and (max-width: 1080px) {
+        .container                                  { width: 1024px; }
+        .container .column,
+        .container .columns                         { margin-right: 20px;  }
+		/*.container .column,
+        .container .columns                         { margin-left: 10px; margin-right: 10px;  }*/
+        .column.alpha, .columns.alpha               { margin-left: 0; margin-right: 10px; }
+        .column.omega, .columns.omega               { margin-right: 0; margin-left: 10px; }
+        .alpha.omega                                { margin-left: 0; margin-right: 0; }
+
+        .container .one.column,
+        .container .one.columns                     { width: 44px; }
+        .container .two.columns                     { width: 108px; }
+        .container .three.columns                   { width: 172px; }
+        .container .four.columns                    { width: 236px; }
+        .container .five.columns                    { width: 300px; }
+        .container .six.columns                     { width: 364px; }
+        .container .seven.columns                   { width: 428px; }
+        .container .eight.columns                   { width: 492px; }
+        .container .nine.columns                    { width: 556px; }
+        .container .ten.columns                     { width: 620px; }
+        .container .eleven.columns                  { width: 684px; }
+        .container .twelve.columns                  { width: 748px; }
+        .container .thirteen.columns                { width: 812px; }
+        .container .fourteen.columns                { width: 876px; }
+        .container .fifteen.columns                 { width: 940px; }
+        .container .sixteen.columns                 { width: 1004px; }
+/**/
+        .container .one-third.column                { width: 321px; }
+        .container .two-thirds.column               { width: 662px; }
+
+        /* Offsets */
+        .container .offset-by-one                   { padding-left: 64px; }
+        .container .offset-by-two                   { padding-left: 128px; }
+        .container .offset-by-three                 { padding-left: 192px; }
+        .container .offset-by-four                  { padding-left: 256px; }
+        .container .offset-by-five                  { padding-left: 320px; }
+        .container .offset-by-six                   { padding-left: 384px; }
+        .container .offset-by-seven                 { padding-left: 448px; }
+        .container .offset-by-eight                 { padding-left: 512px; }
+        .container .offset-by-nine                  { padding-left: 576px; }
+        .container .offset-by-ten                   { padding-left: 640px; }
+        .container .offset-by-eleven                { padding-left: 704px; }
+        .container .offset-by-twelve                { padding-left: 768px; }
+        .container .offset-by-thirteen              { padding-left: 832px; }
+        .container .offset-by-fourteen              { padding-left: 896px; }
+        .container .offset-by-fifteen               { padding-left: 960px; }
+        
+        .small-text {
+			float: none;
+			width: 980px;
+			margin-left: 0;
+			margin-bottom: 10px;
+		}
+		.contact input:first-child {
+			margin-left: 0;
+		}
+		.contact .btn {
+			float: none;
+			padding: 15px;
+			width: 1004px;
+			margin-top: 10px;
+		}
+		.contact .btn:hover {
+			cursor: pointer;
+			opacity: 1;
+			
+		}
+		.contact iframe {
+			width: 1004px;
+			opacity: 1;
+		}
+		.message {
+			clear: both;
+			float: left;
+			padding: 4px;
+			width: 994px;
+			height: 110px;
+			margin-top: 0;
+			font-family: sans-serif;
+			font-size: 1.2em;
+			color: #b3a9a9;
+		}
+		.contact {
+			padding-top: 30px;
+		}
+	}
 
 /* #Tablet (Portrait)
 ================================================== */
