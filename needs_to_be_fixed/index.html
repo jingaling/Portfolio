@@ -301,6 +301,14 @@
 		$('.close_window').click(function(){
 			$('#content_container').hide();
 		});
+
+
+		$.getJSON("preload.json", function(json) {
+			$(preloads).each(function(){
+			    $('<img />')[0].src = this;
+			});
+		});
+
 	//works navigation
 	
 	</script>
