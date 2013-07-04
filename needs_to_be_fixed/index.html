@@ -102,7 +102,7 @@
 			<div data-configid="2365915/3325795" style="width: 100%; height: auto;" class="issuuembed" hidden=true id="work10"></div>
 			<div data-configid="2365915/3365235" style="width: 100%; height: auto;" class="issuuembed" hidden=true id="work19"></div>
 			<div data-configid="2365915/3325825" style="width: 100%; height: auto;" class="issuuembed" hidden=true id="work26"></div>
-			<script type="text/javascript" src="http://e.issuu.com/embed.js" async="true"></script>
+			<script type="text/javascript" src="http://e.issuu.com/embed.js" async></script>
 
 			<ul class="latest-work row portfolio-area" id="portfolio-area" style="height: 1229px;">
 			</ul>
@@ -162,7 +162,10 @@
 										<textarea name="message" id="message" cols="100" rows="6" required  class="required" ></textarea>
 									</li>
 									<li>
-										<button type="submit" id="submit" name="submit" class="button fright">SEND </button>
+										<button type="submit" id="submit" name="submit" class="send button fright">SEND </button>
+									</li>
+                                    <li>
+										<button type="reset" id="cancel" name="cancel" class="cancel button fright">CANCEL</button>
 									</li>	
 								</ul>			
 							</form>
@@ -289,6 +292,10 @@
 		
 		$('.nav_contact').click(function(){
 			$('.contact').toggle('fast');
+		});
+		
+		$('.cancel').click(function(){
+			$('.contact').hide();	
 		});
 		
 		$('.close_window').click(function(){

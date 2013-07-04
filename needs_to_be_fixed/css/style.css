@@ -356,6 +356,20 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 	padding: 0;
 }
+
+h2 {
+	font-size: 1.2em;
+}
+ 
+ p {
+	font-size: 0.8em;
+}
+
+ label{
+	font-size: 0.9em;
+}
+ 
+
 a {
 	color: #08dcc6;
 }
@@ -1337,4 +1351,14 @@ footer a:visited {
     right: 0;
 	 z-index: 10;
    
+}
+.cancel.button.fright
+{
+	width: 70px;
+}
+.send.button.fright
+{
+	float: left;
+    margin-right: 20px;
+    width: 50px;
 }

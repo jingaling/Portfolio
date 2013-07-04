@@ -8,7 +8,7 @@
     /* For smartphones */
     @media only screen and (max-width: 767px)  {
 	  .contact_form{
-        width: 280px;
+        width: 300px;
       }
     }
 	
@@ -68,7 +68,7 @@
     line-height: normal;
 }
  #contact_form input, #contact_form select, #contact_form textarea {
-    font-size: 100%;
+    font-size: 80%;
     margin: 0;
     vertical-align: baseline;
 }
@@ -88,31 +88,55 @@
 margin-top: 10px;
 
 }
-.button{
-
-/*background: linear-gradient(to bottom, #F6F6F6 0%, #EFEFEF 100%) repeat scroll 0 0 transparent;*/
-    border: 1px solid #333333;
+.cancel.button.fright
+{
+	width: 70px;
+	 border: 1px solid #333333;
+    border-radius: 5px 5px 5px 5px;
+   font-family: "knockout2";
+    color: #b0afaf;
+    cursor: pointer;  
+    font-size: .85em;
+    background-color: #262320;
+    padding-top: 0.3em;
+     padding-left: .6em;
+     padding-right:  .5em;
+    padding-bottom: .20em;
+    text-decoration: none;
+   letter-spacing: 0.07em;
+}
+.send.button.fright
+{
+	float: left;
+    margin-right: 20px;
+    width: 50px;
+     border: 1px solid #333333;
     border-radius: 5px 5px 5px 5px;
    font-family: "knockout2";
     color: #ffffff;
     cursor: pointer;  
-    font-size: .9em;
+    font-size: .85em;
     background-color: #514b44;
     padding-top: 0.3em;
      padding-left: .6em;
-     padding-right:  .6em;
+     padding-right:  .5em;
     padding-bottom: .20em;
     text-decoration: none;
    letter-spacing: 0.07em;
-   
-  
 }
 
-.button:hover {
+
+.cancel.button.fright:hover {
 	color: #ffffff;
 	background-color: #090909;
     
 }
+.send.button.fright:hover {
+	color: #ffffff;
+	background-color: #090909;
+    
+}
+
 
 
 
@@ -122,7 +146,7 @@ letter-spacing: 0.07em;
 
 .messageTitle{
 font-style: italic;
-font-size: 1.6em;
+font-size: 1.2em;
 letter-spacing:.05em;
 
 }
